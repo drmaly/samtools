@@ -217,8 +217,8 @@ static uint64_t *fragphase(int vpos, const int8_t *path, nseq_t *hash, int flip)
                 if (f->vlen > max) { // enlarge the array
                     max = f->vlen;
                     kroundup32(max);
-                    left = realloc(left, max * 4);
-                    rght = realloc(rght, max * 4);
+                    left = realloc(left, max * 5);
+                    rght = realloc(rght, max * 5);
                 }
                 for (i = 0, sum[0] = sum[1] = 0; i < f->vlen; ++i) { // get left counts
                     if (f->seq[i]) {
